@@ -1,85 +1,64 @@
-import { ClockIcon, MessageSquare, BarChart2, FileTextIcon, UserPlusIcon, CreditCardIcon, SettingsIcon, LogOut, Headphones, ChartPieIcon, LucideIcon, MessagesSquareIcon, NewspaperIcon, MegaphoneIcon, LineChartIcon, MessageSquareTextIcon, UsersIcon } from 'lucide-react';
+import { ChartPieIcon, DownloadIcon, CreditCardIcon, SettingsIcon, LucideIcon } from 'lucide-react';
 
 type Link = {
     href: string;
     label: string;
     icon: LucideIcon;
-}
+};
 
 export const SIDEBAR_LINKS: Link[] = [
     {
         href: "/dashboard",
-        label: "Dashboard",
+        label: "Tableau de bord",
         icon: ChartPieIcon,
     },
     {
-        href: "/dashboard/campaigns",
-        label: "Campaigns",
-        icon: MegaphoneIcon
-    },
-    {
-        href: "/dashboard/analytics",
-        label: "Analytics",
-        icon: LineChartIcon
-    },
-    {
-        href: "/dashboard/posts",
-        label: "Posts",
-        icon: MessageSquareTextIcon
-    },
-    {
-        href: "/dashboard/engagement",
-        label: "Engagement",
-        icon: UsersIcon
+        href: "/download",
+        label: "Téléchargement",
+        icon: DownloadIcon,
     },
     {
         href: "/dashboard/billing",
-        label: "Billing",
-        icon: CreditCardIcon
+        label: "Facturation",
+        icon: CreditCardIcon,
     },
     {
         href: "/dashboard/settings",
-        label: "Settings",
-        icon: SettingsIcon
+        label: "Paramètres",
+        icon: SettingsIcon,
     },
+];
+
+export const NAV_LINKS = [
+    { name: "Fonctionnalités", href: "#features" },
+    { name: "Tarif", href: "#pricing" },
+    { name: "Témoignages", href: "#reviews" },
+    { name: "FAQ", href: "#faq" },
 ];
 
 export const FOOTER_LINKS = [
     {
-        title: "Product",
+        title: "Produit",
         links: [
-            { name: "Home", href: "/" },
-            { name: "Features", href: "/" },
-            { name: "Pricing", href: "/" },
-            { name: "Contact", href: "/" },
-            { name: "Download", href: "/" },
+            { name: "Fonctionnalités", href: "#features" },
+            { name: "Tarif", href: "#pricing" },
+            { name: "FAQ", href: "#faq" },
+            { name: "Téléchargement", href: "/download" },
         ],
     },
     {
-        title: "Resources",
+        title: "Ressources",
         links: [
-            { name: "Blog", href: "/blog" },
-            { name: "Help Center", href: "/help-center" },
-            { name: "Community", href: "/community" },
-            { name: "Guides", href: "/guides" },
+            { name: "Guide d'utilisation", href: "#" },
+            { name: "Support", href: "mailto:contact@klyx.fr" },
         ],
     },
     {
-        title: "Legal",
+        title: "Légal",
         links: [
-            { name: "Privacy", href: "/privacy" },
-            { name: "Terms", href: "/terms" },
-            { name: "Cookies", href: "/cookies" },
-        ],
-    },
-    {
-        title: "Developers",
-        links: [
-            { name: "API Docs", href: "/api-docs" },
-            { name: "SDKs", href: "/sdks" },
-            { name: "Tools", href: "/tools" },
-            { name: "Open Source", href: "/open-source" },
-            { name: "Changelog", href: "/changelog" },
+            { name: "Mentions légales", href: "/terms" },
+            { name: "Politique de confidentialité", href: "/privacy" },
+            { name: "CGV", href: "/terms" },
         ],
     },
 ];

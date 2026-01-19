@@ -17,8 +17,8 @@ interface MetadataProps {
 }
 
 export const generateMetadata = ({
-    title = `${process.env.NEXT_PUBLIC_APP_NAME} - Smart Social Media Marketing Platform`,
-    description = "Streamline your social media management with AI-powered analytics, scheduling, and content optimization. Get real-time insights, automate posts, and boost engagement across all platforms",
+    title = `${process.env.NEXT_PUBLIC_APP_NAME || "French Tech Sender"} - Contactez la French Tech Bordeaux en 3 minutes`,
+    description = "Accédez à 2 300+ contacts de l'écosystème French Tech Bordeaux. Stages, alternances, prospection B2B — contactez les bons interlocuteurs en quelques clics au lieu de 3 jours de recherche.",
     image = "/thumbnail.png",
     icons = [
         {
@@ -36,35 +36,39 @@ export const generateMetadata = ({
     ],
     noIndex = false,
     keywords = [
-        "AI content creation",
-        "content automation",
-        "AI writing assistant",
-        "content generation",
-        "artificial intelligence",
-        "content marketing"
+        "French Tech Bordeaux",
+        "stage startup Bordeaux",
+        "alternance tech Bordeaux",
+        "prospection B2B startup",
+        "écosystème tech Bordeaux",
+        "contacts startups",
+        "investisseurs Bordeaux",
+        "incubateurs Bordeaux",
+        "recherche stage tech",
+        "networking French Tech",
     ],
     author = process.env.NEXT_PUBLIC_AUTHOR_NAME,
-    twitterHandle = "@yourtwitterhandle",
+    twitterHandle = "@frenchtechbdx",
     type = "website",
-    locale = "en_US",
+    locale = "fr_FR",
     alternates = {},
     publishedTime,
     modifiedTime
 }: MetadataProps = {}): Metadata => {
-    const metadataBase = new URL(process.env.NEXT_PUBLIC_APP_URL || "https://luro-ai.vercel.app");
+    const metadataBase = new URL(process.env.NEXT_PUBLIC_APP_URL || "https://frenchtechsender.com");
     const imageUrl = image ? new URL(image, metadataBase).toString() : null;
 
     return {
         metadataBase,
         title: {
-            template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME}`,
+            template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME || "French Tech Sender"}`,
             default: title
         },
         description,
         keywords,
         authors: [{ name: author }],
         creator: author,
-        publisher: process.env.NEXT_PUBLIC_APP_NAME,
+        publisher: process.env.NEXT_PUBLIC_APP_NAME || "French Tech Sender",
         formatDetection: {
             email: false,
             address: false,
@@ -75,7 +79,7 @@ export const generateMetadata = ({
         // OpenGraph
         openGraph: {
             type,
-            siteName: process.env.NEXT_PUBLIC_APP_NAME,
+            siteName: process.env.NEXT_PUBLIC_APP_NAME || "French Tech Sender",
             title,
             description,
             ...(imageUrl && {

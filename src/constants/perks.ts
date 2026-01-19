@@ -1,36 +1,34 @@
-import { Icons } from "@/components";
-import { ZapIcon, ChartSplineIcon, LifeBuoyIcon, PaletteIcon, ShieldCheckIcon, WaypointsIcon, BrainCircuitIcon, SparklesIcon } from "lucide-react";
-import React from "react";
+import { ZapIcon, DatabaseIcon, RefreshCwIcon, MonitorIcon, ShieldCheckIcon, UsersIcon } from "lucide-react";
 
 export const PERKS = [
     {
         icon: ZapIcon,
-        title: "Fast and Efficient",
-        description: "Experience quick and seamless content creation with our optimized AI tools."
+        title: "Gain de temps massif",
+        description: "Contactez 2 300+ acteurs en 3 minutes au lieu de 3 jours de recherche manuelle.",
     },
     {
-        icon: ChartSplineIcon,
-        title: "Insightful Analytics",
-        description: "Gain valuable insights and analytics to enhance your social media strategy."
+        icon: DatabaseIcon,
+        title: "Base de données complète",
+        description: "8 catégories couvrant l'ensemble de l'écosystème French Tech Bordeaux.",
     },
     {
-        icon: LifeBuoyIcon,
-        title: "24/7 Support",
-        description: "Our team is available around the clock to assist with any issues or questions."
+        icon: RefreshCwIcon,
+        title: "Mises à jour régulières",
+        description: "Bénéficiez de 12 mois de mises à jour pour garder vos contacts à jour.",
     },
     {
-        icon: PaletteIcon,
-        title: "Customizable Solutions",
-        description: "Tailor the tools and features to fit your unique social media needs."
+        icon: MonitorIcon,
+        title: "Multi-plateforme",
+        description: "Application native disponible sur Windows, Mac et Linux.",
     },
     {
         icon: ShieldCheckIcon,
-        title: "Secure and Reliable",
-        description: "Trust our platform to keep your data safe and ensure consistent performance."
+        title: "Données vérifiées",
+        description: "Chaque contact est vérifié manuellement pour garantir la qualité.",
     },
     {
-        icon: WaypointsIcon,
-        title: "Seamless Integration",
-        description: "Easily integrate with your existing social media platforms and tools."
+        icon: UsersIcon,
+        title: "Pour tous les profils",
+        description: "Idéal pour chercheurs de stage, alternants et prospecteurs B2B.",
     },
 ];

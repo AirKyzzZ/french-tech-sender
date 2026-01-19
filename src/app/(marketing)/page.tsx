@@ -1,4 +1,4 @@
-import { Background, Companies, Connect, Container, CTA, Features, Hero, Perks, Pricing, Reviews, Wrapper } from "@/components";
+import { Background, Container, CTA, Demo, FAQ, Features, Hero, Perks, Pricing, Reviews, Wrapper } from "@/components";
 import { Spotlight } from "@/components/ui/spotlight";
 
 const HomePage = () => {
@@ -12,13 +12,11 @@ const HomePage = () => {
                     />
                     <Hero />
                 </Container>
-                <Container className="py-8 lg:py-20">
-                    <Companies />
-                </Container>
-                <Connect />
                 <Features />
+                <Demo />
                 <Perks />
                 <Pricing />
+                <FAQ />
                 <Reviews />
                 <CTA />
             </Wrapper>
@@ -26,4 +24,4 @@ const HomePage = () => {
     )
 };
 
-export default HomePage
+export default HomePage;

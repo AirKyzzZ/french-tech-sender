@@ -1,81 +1,45 @@
-type REVIEW = {
+type Review = {
     name: string;
-    username: string;
+    role: string;
     review: string;
     img: string;
 };
 
-export const REVIEWS: REVIEW[] = [
+export const REVIEWS: Review[] = [
     {
-        name: "Arjun Singh",
-        username: "@arjunsingh",
-        review: "This platform has revolutionized the way I manage my projects. The AI tools are a game-changer!",
-        img: "https://randomuser.me/api/portraits/men/1.jpg"
+        name: "Marie L.",
+        role: "Étudiante en école de commerce",
+        review: "J'ai trouvé mon stage en moins d'une semaine grâce à cet outil. Au lieu de passer des heures sur LinkedIn, j'ai pu contacter directement les bonnes personnes.",
+        img: "https://randomuser.me/api/portraits/women/1.jpg",
     },
     {
-        name: "Priya Nair",
-        username: "@priyanair",
-        review: "Absolutely love the seamless integration with social media. It's made my content creation process so much easier.",
-        img: "https://randomuser.me/api/portraits/women/2.jpg"
+        name: "Thomas D.",
+        role: "Développeur en recherche d'alternance",
+        review: "Incroyable gain de temps ! La base de données est vraiment complète et les contacts sont à jour. J'ai décroché mon alternance en 2 semaines.",
+        img: "https://randomuser.me/api/portraits/men/2.jpg",
     },
     {
-        name: "Rohan Mehta",
-        username: "@rohanmehta",
-        review: "The features offered here are unmatched. My productivity has soared since I started using this service.",
-        img: "https://randomuser.me/api/portraits/men/3.jpg"
+        name: "Sophie M.",
+        role: "Business Developer B2B",
+        review: "Outil indispensable pour la prospection. J'ai pu identifier et contacter rapidement les décideurs de l'écosystème startup bordelais.",
+        img: "https://randomuser.me/api/portraits/women/3.jpg",
     },
     {
-        name: "Sneha Patel",
-        username: "@snehapatel",
-        review: "Customer support is top-notch. They’re always ready to assist with any queries I have.",
-        img: "https://randomuser.me/api/portraits/women/4.jpg"
+        name: "Alexandre R.",
+        role: "Fondateur de startup",
+        review: "Parfait pour développer notre réseau local. Les contacts sont qualifiés et bien catégorisés. Un excellent investissement.",
+        img: "https://randomuser.me/api/portraits/men/4.jpg",
     },
     {
-        name: "Ankit Sharma",
-        username: "@ankitsharma",
-        review: "The customization options available are perfect for my business needs. Highly recommended!",
-        img: "https://randomuser.me/api/portraits/men/5.jpg"
+        name: "Camille B.",
+        role: "Responsable RH",
+        review: "Nous l'utilisons pour sourcer des talents dans l'écosystème tech. La base de données nous fait gagner un temps précieux.",
+        img: "https://randomuser.me/api/portraits/women/5.jpg",
     },
     {
-        name: "Meera Kapoor",
-        username: "@meerakapoor",
-        review: "The intuitive design and ease of use make this platform stand out. It's a must-have for any business.",
-        img: "https://randomuser.me/api/portraits/women/6.jpg"
+        name: "Lucas P.",
+        role: "Étudiant en informatique",
+        review: "Simple, efficace et abordable. J'ai pu envoyer des candidatures ciblées à toutes les startups qui m'intéressaient.",
+        img: "https://randomuser.me/api/portraits/men/6.jpg",
     },
-    {
-        name: "Vikram Desai",
-        username: "@vikramdesai",
-        review: "From analytics to AI-powered tools, this service covers everything I need to grow my business.",
-        img: "https://randomuser.me/api/portraits/men/7.jpg"
-    },
-    {
-        name: "Anjali Menon",
-        username: "@anjalimenon",
-        review: "I’m impressed with how much value I’m getting at this price point. It's worth every penny!",
-        img: "https://randomuser.me/api/portraits/women/8.jpg"
-    },
-    {
-        name: "Karan Gupta",
-        username: "@karangupta",
-        review: "The AI content generation is phenomenal. It saves me hours of work every week.",
-        img: "https://randomuser.me/api/portraits/men/9.jpg"
-    },
-    {
-        name: "Neha Verma",
-        username: "@nehaverma",
-        review: "I love how everything is organized in one place. It makes managing my tasks so much easier.",
-        img: "https://randomuser.me/api/portraits/women/10.jpg"
-    },
-    {
-        name: "Siddharth Jain",
-        username: "@siddharthjain",
-        review: "Their platform is robust, and I have seen a significant improvement in my workflow since I started using it.",
-        img: "https://randomuser.me/api/portraits/men/11.jpg"
-    },
-    {
-        name: "Divya Iyer",
-        username: "@divyaiyer",
-        review: "Fantastic service! The updates and new features keep getting better and better.",
-        img: "https://randomuser.me/api/portraits/women/12.jpg"
-    }
 ];

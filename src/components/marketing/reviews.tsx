@@ -9,15 +9,15 @@ const secondRow = REVIEWS.slice(REVIEWS.length / 2);
 
 const Reviews = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24  w-full">
+        <div id="reviews" className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-xl mx-auto">
-                    <SectionBadge title="Our Customers" />
+                    <SectionBadge title="Témoignages" />
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
-                        What our customers say
+                        Ils nous font confiance
                     </h2>
                     <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">
-                        We are proud to have helped thousands of customers across the globe. Here are some of their stories
+                        Découvrez les retours de ceux qui ont utilisé notre outil pour trouver leur stage, alternance ou développer leur business.
                     </p>
                 </div>
             </Container>
@@ -26,12 +26,12 @@ const Reviews = () => {
                     <div className="relative flex flex-col items-center justify-center overflow-hidden">
                         <Marquee pauseOnHover className="[--duration:30s]">
                             {firstRow.map((review) => (
-                                <ReviewCard key={review.username} {...review} />
+                                <ReviewCard key={review.name} {...review} />
                             ))}
                         </Marquee>
                         <Marquee pauseOnHover reverse className="[--duration:30s]">
                             {secondRow.map((review) => (
-                                <ReviewCard key={review.username} {...review} />
+                                <ReviewCard key={review.name} {...review} />
                             ))}
                         </Marquee>
                         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
@@ -48,28 +48,28 @@ const Reviews = () => {
 const ReviewCard = ({
     img,
     name,
-    username,
+    role,
     review,
 }: {
     img: string;
     name: string;
-    username: string;
+    role: string;
     review: string;
 }) => {
     return (
-        <figure className="relative w-64 cursor-pointer overflow-hidden rounded-xl border border-foreground/5 bg-neutral-50/[.05] hover:bg-foreground/10 p-4 transition-all duration-300 ease-in-out">
-            <div className="flex flex-row items-center gap-2">
-                <Image className="rounded-full" width="32" height="32" alt="" src={img} />
+        <figure className="relative w-72 cursor-pointer overflow-hidden rounded-xl border border-foreground/5 bg-neutral-50/[.05] hover:bg-foreground/10 p-4 transition-all duration-300 ease-in-out">
+            <div className="flex flex-row items-center gap-3">
+                <Image className="rounded-full" width="40" height="40" alt={name} src={img} />
                 <div className="flex flex-col">
                     <figcaption className="text-sm font-medium text-foreground">
                         {name}
                     </figcaption>
-                    <p className="text-xs font-medium text-foreground/40">{username}</p>
+                    <p className="text-xs font-medium text-foreground/40">{role}</p>
                 </div>
             </div>
-            <blockquote className="mt-2 text-sm">{review}</blockquote>
+            <blockquote className="mt-3 text-sm text-foreground/80 leading-relaxed">{review}</blockquote>
         </figure>
     );
 };
 
-export default Reviews
+export default Reviews;

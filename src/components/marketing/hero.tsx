@@ -1,10 +1,12 @@
-import { ArrowRightIcon } from "lucide-react";
+"use client";
+
+import { ArrowRightIcon, PlayIcon } from "lucide-react";
 import Link from "next/link";
 import { BlurText } from "../ui/blur-text";
 import { Button } from "../ui/button";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Container from "../global/container";
+import { STATS } from "@/constants";
 
 const Hero = () => {
     return (
@@ -18,38 +20,59 @@ const Hero = () => {
                         <div className="w-1.5 h-1.5 rounded-full bg-primary flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                         </div>
                     </div>
-                    <span className="inline-flex items-center justify-center gap-2 animate-text-gradient animate-background-shine bg-gradient-to-r from-[#b2a8fd] via-[#8678f9] to-[#c7d2fe] bg-[200%_auto] bg-clip-text text-sm text-transparent">
-                        Build for the future
+                    <span className="inline-flex items-center justify-center gap-2 animate-text-gradient animate-background-shine bg-gradient-to-r from-[#60a5fa] via-[#3b82f6] to-[#93c5fd] bg-[200%_auto] bg-clip-text text-sm text-transparent">
+                        French Tech Bordeaux
                         <span className="text-xs text-secondary-foreground px-1.5 py-0.5 rounded-full bg-gradient-to-b from-foreground/20 to-foreground/10 flex items-center justify-center">
-                            What&apos;s new
+                            2 300+ contacts
                             <ArrowRightIcon className="w-3.5 h-3.5 ml-1 text-foreground/50" />
                         </span>
                     </span>
                 </div>
             </Container>
             <BlurText
-                word={"Your ultimate social media\n marketing tool"}
-                className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent py-2 md:py-0 lg:!leading-snug font-medium racking-[-0.0125em] mt-6 font-heading"
+                word={"Contactez 2 300+ acteurs\nde la French Tech Bordeaux\nen 3 minutes"}
+                className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent py-2 md:py-0 lg:!leading-snug font-medium tracking-[-0.0125em] mt-6 font-heading"
             />
             <Container delay={0.1}>
                 <p className="text-sm sm:text-base lg:text-lg mt-4 text-accent-foreground/60 max-w-2xl mx-auto">
-                    Elevate your social media presense with AI-powered content creation and scheduling. <span className="hidden sm:inline">Luro is the all-in-one solution for your social media marketing needs.</span>
+                    Stages, alternances, prospection B2B — accédez instantanément à l&apos;écosystème tech bordelais. <span className="hidden sm:inline">Au lieu de 3 jours de recherche, contactez les bons interlocuteurs en quelques clics.</span>
                 </p>
             </Container>
             <Container delay={0.2}>
-                <div className="flex items-center justify-center md:gap-x-6 mt-8">
+                <div className="flex items-center justify-center gap-4 mt-8">
                     <Button asChild size="lg">
-                        <Link href="/app">
-                            Start for free
+                        <Link href="#pricing">
+                            Obtenir l&apos;accès — 179€
+                            <ArrowRightIcon className="w-4 h-4 ml-2" />
                         </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="hidden md:flex">
-                        <Link href="#">
-                            How it works
+                        <Link href="#demo">
+                            <PlayIcon className="w-4 h-4 mr-2" />
+                            Voir la démo
                         </Link>
                     </Button>
                 </div>
             </Container>
+
+            {/* Stats Ribbon */}
+            <Container delay={0.25}>
+                <div className="mt-12 w-full max-w-3xl mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 p-4 md:p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
+                        {STATS.map((stat, index) => (
+                            <div key={index} className="flex flex-col items-center text-center">
+                                <span className="text-2xl md:text-3xl font-bold text-foreground">
+                                    {stat.value}
+                                </span>
+                                <span className="text-xs md:text-sm text-muted-foreground mt-1">
+                                    {stat.label}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </Container>
+
             <Container delay={0.3}>
                 <div className="relative mx-auto max-w-7xl rounded-xl lg:rounded-[32px] border border-neutral-200/50 p-2 backdrop-blur-lg border-neutral-700 bg-neutral-800/50 md:p-4 mt-12">
                     <div className="absolute top-1/4 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-1/4 -translate-y-1/2 inset-0 blur-[10rem]"></div>
@@ -57,7 +80,7 @@ const Hero = () => {
                     <div className="rounded-lg lg:rounded-[24px] border p-2 border-neutral-700 bg-black">
                         <Image
                             src="/images/dashboard.png"
-                            alt="dashboard"
+                            alt="Interface de l'application French Tech Sender"
                             width={1920}
                             height={1080}
                             className="rounded-lg lg:rounded-[20px]"
@@ -69,4 +92,4 @@ const Hero = () => {
     )
 };
 
-export default Hero
+export default Hero;

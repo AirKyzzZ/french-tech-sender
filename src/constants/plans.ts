@@ -1,71 +1,63 @@
-type PLAN = {
+export type Plan = {
     id: string;
     title: string;
     desc: string;
-    monthlyPrice: number;
-    yearlyPrice: number;
+    price: number;
+    currency: string;
     badge?: string;
     buttonText: string;
     features: string[];
-    link: string;
+    highlights: string[];
 };
 
-export const PLANS: PLAN[] = [
+export const PLAN: Plan = {
+    id: "complete-access",
+    title: "Accès Complet",
+    desc: "Paiement unique • Pas d'abonnement",
+    price: 179,
+    currency: "€",
+    badge: "Meilleure offre",
+    buttonText: "Obtenir l'accès maintenant",
+    features: [
+        "Base de données French Tech Bordeaux complète",
+        "2 300+ contacts dans 8 catégories",
+        "Mises à jour incluses pendant 12 mois",
+        "Client Windows, Mac, Linux",
+        "Support par email",
+        "Guide d'utilisation complet",
+    ],
+    highlights: [
+        "Paiement sécurisé par Stripe",
+        "Garantie satisfait ou remboursé 14 jours",
+    ],
+};
+
+export const STATS = [
     {
-        id: "free",
-        title: "Free",
-        desc: "Get started with essential tools for social media content creation",
-        monthlyPrice: 0,
-        yearlyPrice: 0,
-        buttonText: "Get Started",
-        features: [
-            "Basic AI content generation",
-            "4 social media integrations",
-            "Community support",
-            "1 project limit",
-            "Standard analytics",
-            "Basic image generation"
-        ],
-        link: "https://stripe.com/free-plan-link"
+        value: "2 300+",
+        label: "Contacts vérifiés",
     },
     {
-        id: "pro",
-        title: "Pro",
-        desc: "Unlock advance features for enhanced content and strategy",
-        monthlyPrice: 10,
-        yearlyPrice: 120,
-        badge: "Most Popular",
-        buttonText: "Upgrade to Pro",
-        features: [
-            "Advanced AI content generation",
-            "10 social media integrations",
-            "Priority email support",
-            "10 project limit",
-            "Enhanced analytics & insights",
-            "Pro model image generation",
-            "Team collaboration tools",
-            "Custom branding options"
-        ],
-        link: "https://stripe.com/pro-plan-link"
+        value: "8",
+        label: "Catégories",
     },
     {
-        id: "enterprise",
-        title: "Enterprise",
-        desc: "Tailored solutions for large organizations and agencies",
-        monthlyPrice: 15,
-        yearlyPrice: 180,
-        badge: "Contact Sales",
-        buttonText: "Upgrade to Enterprise",
-        features: [
-            "Unlimited AI content generation",
-            "All social media integrations",
-            "Dedicated account manager",
-            "Unlimited projects",
-            "Custom analytics & reporting",
-            "Enterprise-grade security",
-            "Free updates",
-            // "24/7 priority support"
-        ],
-        link: "https://stripe.com/enterprise-plan-link"
-    }
+        value: "3 min",
+        label: "Au lieu de 3 jours",
+    },
+    {
+        value: "3",
+        label: "Plateformes (Win, Mac, Linux)",
+    },
+];
+
+export const CATEGORIES = [
+    "Startups",
+    "ScaleUps",
+    "ETI",
+    "Investisseurs",
+    "Incubateurs",
+    "Écoles",
+    "Community builders",
+    "Coworkings",
 ];

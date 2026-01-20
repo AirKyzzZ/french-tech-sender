@@ -55,7 +55,7 @@ export const generateMetadata = ({
     publishedTime,
     modifiedTime
 }: MetadataProps = {}): Metadata => {
-    const metadataBase = new URL(process.env.NEXT_PUBLIC_APP_URL || "https://frenchtechsender.com");
+    const metadataBase = new URL(process.env.NEXT_PUBLIC_APP_URL || "https://french-tech-sender.vercel.app");
     const imageUrl = image ? new URL(image, metadataBase).toString() : null;
 
     return {

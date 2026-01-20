@@ -11,7 +11,7 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[Live Demo](https://frenchtechsender.com) · [Report Bug](https://github.com/AirKyzzZ/french-tech-sender/issues) · [Request Feature](https://github.com/AirKyzzZ/french-tech-sender/issues)
+[Live Demo](https://french-tech-sender.vercel.app) · [Report Bug](https://github.com/AirKyzzZ/french-tech-sender/issues) · [Request Feature](https://github.com/AirKyzzZ/french-tech-sender/issues)
 
 ---
 
@@ -141,7 +141,7 @@ Create a `.env.local` file with the following variables:
 ```env
 # App
 NEXT_PUBLIC_APP_NAME=French Tech Sender
-NEXT_PUBLIC_APP_URL=https://frenchtechsender.com
+NEXT_PUBLIC_APP_URL=https://french-tech-sender.vercel.app
 
 # Database (Supabase)
 DATABASE_URL=postgresql://postgres.[ref]:[password]@aws-0-eu-west-3.pooler.supabase.com:6543/postgres?pgbouncer=true

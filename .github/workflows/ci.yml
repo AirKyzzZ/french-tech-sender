@@ -58,7 +58,7 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_APP_NAME: "French Tech Sender"
-          NEXT_PUBLIC_APP_DOMAIN: "frenchtechsender.com"
-          NEXT_PUBLIC_APP_URL: "https://frenchtechsender.com"
+          NEXT_PUBLIC_APP_DOMAIN: "french-tech-sender.vercel.app"
+          NEXT_PUBLIC_APP_URL: "https://french-tech-sender.vercel.app"
           NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}

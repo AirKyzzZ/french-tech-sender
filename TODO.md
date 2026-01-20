@@ -2,6 +2,7 @@
 
 ## UI Fixes
 - [ ] Fix the line spacing in the hero section title
+- [ ] Create a logo and add it as favicon
 
 ## Features
 - [ ] Create the actual Python client with a .msi installer

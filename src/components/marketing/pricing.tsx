@@ -1,8 +1,5 @@
-"use client";
-
 import { PLAN } from "@/constants";
 import { CheckIcon, ShieldCheckIcon, RotateCcwIcon, ArrowRightIcon } from "lucide-react";
-import Link from "next/link";
 import Container from "../global/container";
 import { Button } from "../ui/button";
 import { SectionBadge } from "../ui/section-bade";
@@ -58,10 +55,10 @@ const Pricing = () => {
 
                                 {/* CTA Button */}
                                 <Button asChild size="lg" className="w-full text-lg py-6">
-                                    <Link href="/api/checkout">
+                                    <a href="/api/checkout">
                                         {PLAN.buttonText}
                                         <ArrowRightIcon className="w-5 h-5 ml-2" />
-                                    </Link>
+                                    </a>
                                 </Button>
 
                                 {/* Highlights */}

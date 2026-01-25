@@ -1,7 +1,7 @@
 # TODO
 
 ## UI Fixes
-- [ ] Fix the line spacing in the hero section title
+- [x] Fix the line spacing in the hero section title
 - [ ] Create a logo and add it as favicon
 
 ## Features

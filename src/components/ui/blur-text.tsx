@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { cn } from "@/functions";
 
-interface BlurIntProps {
+interface BlurTextProps {
     word: React.ReactNode | string;
     className?: string;
     variant?: {
@@ -13,24 +13,27 @@ interface BlurIntProps {
     duration?: number;
 }
 
-export const BlurText = ({ word, className, variant, duration = 1 }: BlurIntProps) => {
-    const defaultVariants = {
-        hidden: { filter: "blur(10px)", opacity: 0, y: -20 },
-        visible: { filter: "blur(0px)", opacity: 1, y: 0 },
-    };
-    const combinedVariants = variant || defaultVariants;
+const DEFAULT_VARIANTS = {
+    hidden: { filter: "blur(10px)", opacity: 0, y: -20 },
+    visible: { filter: "blur(0px)", opacity: 1, y: 0 },
+};
 
-    const renderWord = () => {
-        if (typeof word === 'string') {
-            return word.split('\n').map((line, index) => (
-                <span key={index}>
-                    {line}
-                    {index < word.split('\n').length - 1 && <br className="hidden md:block" />}
-                </span>
-            ));
+export function BlurText({ word, className, variant, duration = 1 }: BlurTextProps) {
+    const combinedVariants = variant ?? DEFAULT_VARIANTS;
+
+    function renderContent() {
+        if (typeof word !== "string") {
+            return word;
         }
-        return word; // If it's JSX or ReactNode, render it directly
-    };
+
+        const lines = word.split("\n");
+        return lines.map((line, index) => (
+            <span key={index}>
+                {line}
+                {index < lines.length - 1 && <br className="hidden md:block" />}
+            </span>
+        ));
+    }
 
     return (
         <motion.h1
@@ -43,7 +46,7 @@ export const BlurText = ({ word, className, variant, duration = 1 }: BlurIntProp
                 "text-center tracking-[-0.02em] drop-shadow-sm",
             )}
         >
-            {renderWord()}
+            {renderContent()}
         </motion.h1>
     );
-};
+}

@@ -33,6 +33,11 @@ export const generateMetadata = ({
             sizes: "16x16",
             url: "/icons/favicon-16x16.png"
         },
+        {
+            rel: "apple-touch-icon",
+            sizes: "180x180",
+            url: "/icons/icon.png"
+        },
     ],
     noIndex = false,
     keywords = [

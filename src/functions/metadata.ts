@@ -126,7 +126,7 @@ export const generateMetadata = ({
 
         // Verification
         verification: {
-            google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+            google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "4QRu67RELS06oDzjPHno4lJpdTAgdOMnanaIDBy39Ao",
             yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
             yahoo: process.env.NEXT_PUBLIC_YAHOO_VERIFICATION,
         },
